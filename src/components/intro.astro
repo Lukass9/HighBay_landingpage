@@ -1,17 +1,28 @@
 ---
 import { Icon } from "astro-icon";
 import ContentSection from "~/components/content-section.astro";
+import Onled from "./onled.astro";
+import { Picture } from "@astrojs/image/components";
+import OnledLogo from "~/assets/onled.png"
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
-<ContentSection title="Just ship less" id="intro">
-  <Icon slot="eyebrow" name="logomark" class="h-32" />
+<ContentSection title="High Bay 200lm/W" id="intro">
+  <Onled fontSize={"5xl"}/>
+  <Picture slot="eyebrow" 
+    class="h-full w-full object-cover"
+    src={OnledLogo}
+    widths={widths}
+    sizes={sizes}
+    loading="eager"
+    alt="A floating Lamps"/>
   <Fragment slot="lead">
-    Astro is a new kind of site builder for the
-    <span class="text-primary">modern</span> web.
-    <span class="text-primary">Lightning-fast</span>
-    performance meets <span class="text-primary">powerful</span> developer experience.
+    Nowoczesna lampa przemysłowa - <span class="text-primary"> Potęga oświetlenia dla Twojego biznesu </span>
+    Oświetlenie, które nadaje Twojej firmie charakteru
   </Fragment>
-  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+
+  <!-- <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
     <a
       href="https://docs.astro.build/"
       class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
@@ -26,5 +37,5 @@ import ContentSection from "~/components/content-section.astro";
       <Icon pack="mdi" name="rocket" class="h-8" />
       <span>Try it out</span>
     </a>
-  </div>
+  </div> -->
 </ContentSection>

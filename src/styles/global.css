@@ -4,11 +4,11 @@ a,
 .btn {
   @apply transition-colors duration-200;
   @apply hover:text-secondary;
-  @apply focus:outline-none focus:ring-1 focus:ring-green-600 focus:ring-offset-1 focus:ring-offset-transparent;
+  @apply focus:outline-none focus:ring-1 focus:ring-[#68b52e] focus:ring-offset-1 focus:ring-offset-transparent;
 }
 
 .gradient-text {
   @apply bg-clip-text text-transparent;
-  @apply bg-gradient-to-br from-green-600 to-lime-100 ;
+  @apply bg-gradient-to-br from-[#68b52e] to-lime-300 ;
   /* @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500; */
 }
