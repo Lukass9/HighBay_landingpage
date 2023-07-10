@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
+        onled: ["Orbitron, sans-serif"],
       },
       colors: {
         primary: "var(--color-primary)",
