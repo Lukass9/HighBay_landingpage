@@ -9,6 +9,6 @@ a,
 
 .gradient-text {
   @apply bg-clip-text text-transparent;
-  @apply bg-gradient-to-br from-green-600 to-lime-100 ;
+  @apply bg-gradient-to-br from-[#68B52E] to-lime-200 ;
   /* @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500; */
 }
