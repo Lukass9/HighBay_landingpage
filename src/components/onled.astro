@@ -1,8 +1,21 @@
 ---
-    const { fontSize } = Astro.props;
+    let wrapp = ""
+    let on = ""
+    let pl = ""
+    const { logo } = Astro.props;
+    if(logo==="xl"){
+        wrapp = "text-4xl"
+        on="px-1 py-1 pb-3 rounded-md leading-6"
+        pl = "text-xl"
+    }
+    else if(logo === "xs"){
+        wrapp = "text-lg"
+        on="pb-1 py-px rounded leading-4"
+        pl = "text-xs"
+    }
 ---
-<div class=`flex items-center font-onled text-${fontSize}`>
-    <h1 class="bg-[#68b52e] p-px rounded-sm text-white leading-none">on</h1>
-    <h1 class="">Ied.</h1>
-    <h1 class="text-xs self-end">pl</h1>
+<div class=`flex items-baseline font-onled ${wrapp}`>
+    <p class=`bg-[#68b52e] text-white ${on}`>on</p>
+    <p class="">Ied.</p>
+    <p class=`${pl} self-end`>pl</p>
 </div>
