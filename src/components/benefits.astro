@@ -1,0 +1,69 @@
+---
+import { Icon } from 'astro-icon';
+import ContentSection from '~/components/content-section.astro';
+import type { FeatureItem } from '~/types';
+
+const features: Array<FeatureItem> = [
+  {
+    title: 'Potężne źródło światła',
+    description:
+      'Nasza lampa przemysłowa jest dostępna w trzech wariantach mocy: 100W, 150W i 200W. Dzięki temu możesz dopasować ją do indywidualnych potrzeb i rozmiaru swojej przestrzeni. Skuteczność świetlna wynosząca 200 lm/W zapewnia efektywne wykorzystanie energii.',
+    icon: 'icon-park:speed-one',
+  },
+  {
+    title: 'Wszechstronna barwa światła',
+    description:
+      'Wybierz spośród dwóch barw światła - neutralnej 4000K lub zimnej 6000K. Dzięki temu możesz dostosować oświetlenie do specyfiki swojej działalności i preferencji estetycznych.',
+    icon: 'ion:color-filter',
+  },
+  {
+    title: 'Optymalna trwałość i wydajność',
+    description:
+      'Nasza lampa przemysłowa została zaprojektowana z myślą o ekstremalnych warunkach pracy. Materiał wykonania - aluminium - gwarantuje wysoką trwałość i odporność na czynniki atmosferyczne. Dzięki stopniowi ochrony IP65, lampa jest odporna na pył, wilgoć i zewnętrzne uszkodzenia.',
+    icon: 'mdi:directions-fork',
+  },
+  {
+    title: 'Dopasowana do Twoich potrzeb',
+    description:
+      'Nasza lampa przemysłowa jest wyposażona w diody SMD 2835, zapewniających wysoką jakość światła oraz równomierne rozproszenie. Kąt świecenia wynoszący 90° zapewnia szerokie pokrycie oświetleniem, idealne do magazynów, hal produkcyjnych i innych przestrzeni przemysłowych.',
+    icon: 'mdi:graph',
+  },
+  {
+    title: 'Energooszczędność i niskie koszty utrzymania',
+    description:
+      'Dzięki wykorzystaniu zaawansowanych technologii LED, nasza lampa przyczynia się do znacznego zmniejszenia zużycia energii. Zasilanie AC 100-277 V/50-60 Hz pozwala na elastyczność w podłączeniu lampy do różnych źródeł zasilania. Wysoka sprawność świetlna oraz niskie koszty konserwacji wpływają korzystnie na Twoje finanse.',
+    icon: 'mdi:leaf',
+  },
+  {
+    title: 'Gwarancja i certyfikaty',
+    description:
+      'Nasza lampa przemysłowa objęta jest 5-letnią gwarancją, z możliwością przedłużenia do 7 lub 10 lat. Posiada certyfikaty CE, RoHS oraz TUV, co potwierdza jej zgodność z europejskimi standardami jakości i bezpieczeństwa.',
+    icon: 'mdi:approve',
+  },
+];
+---
+
+<ContentSection title="Korzyści i cechy" id="benefits">
+  <Fragment slot="lead">
+    Oświetlenie przemysłowe ma kluczowe znaczenie dla <span class="text-primary"
+      >efektywności i bezpieczeństwa</span
+    > w miejscu pracy. Odkryj naszą nowoczesną lampę przemysłową, która zapewni nie
+    tylko <span class="text-primary">doskonałe oświetlenie</span>, ale także <span
+      class="text-primary">stylowy design</span
+    >. Nasza lampa przemysłowa oferuje
+    <span class="text-primary">wiele korzyści</span>:
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>

@@ -1,12 +1,12 @@
 ---
-import { Icon } from "astro-icon";
-import ContentSection from "~/components/content-section.astro";
-import Onled from "./onled.astro";
-import { Picture } from "@astrojs/image/components";
-import OnledLogo from "~/assets/onled.png"
+import { Icon } from 'astro-icon';
+import ContentSection from '~/components/content-section.astro';
+import Onled from './onled.astro';
+import { Picture } from '@astrojs/image/components';
 const widths = [450, 800];
-const sizes = "(min-width: 640px) 42vw, 67vw";
+const sizes = '(min-width: 640px) 42vw, 67vw';
 ---
+
 <!-- 
 <ContentSection title="High Bay 200lm/W" id="intro">
   <Onled fontSize={"5xl"}/>
@@ -23,29 +23,44 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
   </Fragment>
 
 --- -->
-
 <ContentSection title="High Bay 200lm/W" id="intro">
   <!-- <Icon slot="eyebrow" name="logomark" class="h-32" /> -->
-  <a slot="eyebrow" href="https://onled.pl/lampy-high-bay-led/1/default/1/f_at_23_842/1" target="_blank"> <Onled logo="xl"/> </a>
+  <a
+    slot="eyebrow"
+    href="https://onled.pl/lampy-high-bay-led/1/default/1/f_at_23_842/1"
+    target="_blank"
+  >
+    <Onled logo="xl" />
+  </a>
   <Fragment slot="lead">
-    Zapoznaj się z potęgą lampy High Bay UFO 200 lm/W - 
-    wyjątkowa jasność przy niezwykle efektywnym zużyciu energii. 
-    Oświetl swoją przestrzeń i zwiększ efektywność dzięki tej niezawodnej lampie przemysłowej.
+    Nasze lampy wyróżniają się imponującą mocą i efektywnością świetlną, co
+    oznacza, że dostaniesz <span class="text-primary">więcej światła</span>
+    przy <span class="text-primary">mniejszym zużyciu energii</span>. Dzięki
+    temu osiągniesz nie tylko znaczne <span class="text-primary"
+      >oszczędności</span
+    >, ale także doskonałą <span class="text-primary">jakość oświetlenia</span>,
+    która poprawi efektywność pracy i bezpieczeństwo Twojej przestrzeni.
   </Fragment>
-  <!-- <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-    <a
-      href="https://docs.astro.build/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon pack="mdi" name="telescope" class="h-8" />
-      <span>Read the docs</span>
-    </a>
-    <a
-      href="https://astro.new/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon pack="mdi" name="rocket" class="h-8" />
-      <span>Try it out</span>
-    </a>
-  </div> -->
 </ContentSection>
+
+<div class="flex flex-col items-center">
+  <p class="mb-8 max-w-5xl text-center">
+    Niezawodność to nasza dewiza. Lampy High Bay UFO są wykonane z najwyższej
+    jakości materiałów, zapewniając trwałość i odporność na trudne warunki
+    przemysłowe. Ich stopień ochrony IP65 gwarantuje, że są odporne na kurz,
+    wilgoć i inne czynniki zewnętrzne.
+  </p>
+  <p class="mb-8 max-w-5xl text-center">
+    Dodatkowo, nasze lampy oferują szeroki kąt świecenia, zapewniając
+    jednocześnie skoncentrowane i równomierne rozproszenie światła. To oznacza,
+    że Twoja przestrzeń zostanie idealnie oświetlona, niezależnie od jej
+    rozmiaru.
+  </p>
+  <p class="max-w-5xl text-center">
+    Zaufaj lampom High Bay UFO i doświadcz rewolucji w oświetleniu przemysłowym.
+    Przekonaj się, jak nasze produkty mogą podnieść poprzeczkę w Twojej branży.
+    Wybierz niezawodność, wydajność i nowoczesny design. Zamów już teraz i
+    przekonaj się, dlaczego setki zadowolonych klientów poleca nasze lampy High
+    Bay UFO.
+  </p>
+</div>
