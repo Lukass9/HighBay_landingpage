@@ -4,36 +4,36 @@ import ContentSection from '~/components/content-section.astro';
 import type { SpecificationItem } from '~/types';
 import SpecificationList from '~/components/specification-list.astro';
 
-const Specifications: Array<SpecificationItem> = [
+const specifications: Array<SpecificationItem> = [
   {
     title: 'Napięcie zasilania',
     value: '100-277V',
-    icon: 'frameworks/react',
+    icon: 'ic:baseline-power',
   },
   {
     title: 'Moc',
     value: '100W, 150W, 200W',
-    icon: 'frameworks/preact',
+    icon: 'ic:baseline-bolt',
   },
   {
     title: 'Skuteczność świetlna',
     value: '200 lm/W',
-    icon: 'frameworks/svelte',
+    icon: 'cil:chart-line',
   },
   {
     title: 'Barwa światła',
     value: '4000K, 6000K',
-    icon: 'frameworks/vue',
+    icon: 'ion:color-filter',
   },
   {
     title: 'Kąt świecenia',
     value: '90°',
-    icon: 'frameworks/solid',
+    icon: 'system-uicons:angle',
   },
   {
     title: 'Współczynnik oddawania barw (CRI)',
     value: '>70Ra',
-    icon: 'frameworks/lit',
+    icon: 'mdi:color',
   },
   {
     title: 'Współczynnik mocy (Power Factor)',
@@ -73,6 +73,11 @@ const Specifications: Array<SpecificationItem> = [
 ];
 ---
 
-<ContentSection title="Dane techniczne" id="specification">
-  <Fragment slot="lead"></Fragment>
-</ContentSection>
+<div
+  class="h-screen w-screen bg-gradient-to-b from-transparent via-blue-100 via-cyan-100 to-transparent"
+>
+  <SpecificationList items={specifications} />
+  <ContentSection title="Dane techniczne" id="specification">
+    <Fragment slot="lead"></Fragment>
+  </ContentSection>
+</div>
