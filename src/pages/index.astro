@@ -1,18 +1,18 @@
 ---
-import '@fontsource-variable/inter'
-import Compatibility from '~/components/compatibility.astro'
-import Footer from '~/components/footer.astro'
-import Header from '~/components/header.astro'
-import Intro from '~/components/intro.astro'
-import Showcase from '~/components/showcase.astro'
-import Splash from '~/components/splash.astro'
-import '~/styles/index.css'
-import Benefits from '~/components/benefits.astro'
+import '@fontsource-variable/inter';
+import Footer from '~/components/footer.astro';
+import Header from '~/components/header.astro';
+import Intro from '~/components/intro.astro';
+import Showcase from '~/components/showcase.astro';
+import Splash from '~/components/splash.astro';
+import '~/styles/index.css';
+import Benefits from '~/components/benefits.astro';
+import Specification from '~/components/specification.astro';
 
-const { generator, site } = Astro
-const image = new URL('social.jpg', site)
+const { generator, site } = Astro;
+const image = new URL('social.jpg', site);
 const description =
-  'Odkryj nowoczesną lampę przemysłową High Bay UFO 200 lm/W. Nasza lampa zapewnia doskonałe oświetlenie przy minimalnym zużyciu energii. Skuteczność świetlna 200 lm/W, trwała konstrukcja z aluminium, gwarancja 5 lat. Idealna do magazynów, hal produkcyjnych i innych przestrzeni przemysłowych. Skontaktuj się z nami już dziś!'
+  'Odkryj nowoczesną lampę przemysłową High Bay UFO 200 lm/W. Nasza lampa zapewnia doskonałe oświetlenie przy minimalnym zużyciu energii. Skuteczność świetlna 200 lm/W, trwała konstrukcja z aluminium, gwarancja 5 lat. Idealna do magazynów, hal produkcyjnych i innych przestrzeni przemysłowych. Skontaktuj się z nami już dziś!';
 ---
 
 <!DOCTYPE html>
@@ -36,15 +36,15 @@ const description =
 
     <!-- initialize theme -->
     <script is:inline>
-      const themeSaved = localStorage.getItem('theme')
+      const themeSaved = localStorage.getItem('theme');
 
       if (themeSaved) {
-        document.documentElement.dataset.theme = themeSaved
+        document.documentElement.dataset.theme = themeSaved;
       } else {
         const prefersDark = window.matchMedia(
           '(prefers-color-scheme: dark)'
-        ).matches
-        document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light'
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
       }
 
       window
@@ -53,9 +53,9 @@ const description =
           if (!localStorage.getItem('theme')) {
             document.documentElement.dataset.theme = event.matches
               ? 'dark'
-              : 'light'
+              : 'light';
           }
-        })
+        });
     </script>
   </head>
   <body
@@ -66,7 +66,7 @@ const description =
     <div class="space-y-24 px-8 py-32">
       <Intro />
       <Benefits />
-      <!-- <Compatibility /> -->
+      <Specification />
       <!-- <Showcase /> -->
     </div>
     <!-- <Footer /> -->

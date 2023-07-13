@@ -1,0 +1,78 @@
+---
+import CompatibilityList from '~/components/specification-list.astro';
+import ContentSection from '~/components/content-section.astro';
+import type { SpecificationItem } from '~/types';
+import SpecificationList from '~/components/specification-list.astro';
+
+const Specifications: Array<SpecificationItem> = [
+  {
+    title: 'Napięcie zasilania',
+    value: '100-277V',
+    icon: 'frameworks/react',
+  },
+  {
+    title: 'Moc',
+    value: '100W, 150W, 200W',
+    icon: 'frameworks/preact',
+  },
+  {
+    title: 'Skuteczność świetlna',
+    value: '200 lm/W',
+    icon: 'frameworks/svelte',
+  },
+  {
+    title: 'Barwa światła',
+    value: '4000K, 6000K',
+    icon: 'frameworks/vue',
+  },
+  {
+    title: 'Kąt świecenia',
+    value: '90°',
+    icon: 'frameworks/solid',
+  },
+  {
+    title: 'Współczynnik oddawania barw (CRI)',
+    value: '>70Ra',
+    icon: 'frameworks/lit',
+  },
+  {
+    title: 'Współczynnik mocy (Power Factor)',
+    value: '0,95',
+    icon: '',
+  },
+  {
+    title: 'Materiał',
+    value: 'aluminium',
+    icon: '',
+  },
+  {
+    title: 'Kolor',
+    value: 'czarny',
+    icon: '',
+  },
+  {
+    title: 'Zasilanie',
+    value: 'sieciowe',
+    icon: '',
+  },
+  {
+    title: 'Klasa szczelności',
+    value: 'IP65',
+    icon: '',
+  },
+  {
+    title: 'Rodzaj diody',
+    value: 'LED SMD2835',
+    icon: '',
+  },
+  {
+    title: 'Gwarancja',
+    value: '5 lat',
+    icon: '',
+  },
+];
+---
+
+<ContentSection title="Dane techniczne" id="specification">
+  <Fragment slot="lead"></Fragment>
+</ContentSection>
